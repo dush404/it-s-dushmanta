@@ -1,16 +1,62 @@
-# React + Vite
+# Dushmanta Khilari - Premium Interactive Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-end, award-winning style personal portfolio website built with React, GSAP, and buttery-smooth Lenis scrolling. Inspired by top-tier agency designs like Paper Tiger.
 
-Currently, two official plugins are available:
+## ✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **100% Pure CSS:** Zero Tailwind dependencies. Clean, modular, and performant custom CSS.
+- **GSAP Animations:** Extensive use of GSAP and ScrollTrigger for premium motion design.
+- **Lenis Smooth Scroll:** Flawless inertia scrolling at 60fps.
+- **Custom Magnetic Cursor:** A custom-built, dual-layer interactive cursor that magnetically snaps to interactive elements using GSAP's `quickTo` for buttery responsiveness.
+- **Cinematic Preloader:** A 5-block staggered reveal animation ensuring a premium entrance.
+- **Horizontal Scroll Architecture:** The Work section features a complex scroll-jacking mechanism where vertical scroll is pinned to translate projects horizontally.
+- **Full-Screen Overlays:**
+  - **Navigation Menu:** Split-layout, high-contrast dark overlay.
+  - **Resume Modal:** A beautiful, scroll-locked modal displaying detailed experience, education, and skills.
+- **Dynamic Theming:** Built iteratively starting from a minimal green palette to vibrant multi-layer mesh gradients and elegant dark modes.
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open `http://localhost:5173` in your browser.
 
-## Expanding the ESLint configuration
+## 📁 Project Architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+All source code lives within the `src` directory with a 1:1 component-to-styling architecture:
+
+- **Global Ecosystem:**
+  - `App.jsx` & `App.css`: Main application container, Lenis wrapper, and section composition.
+  - `index.css`: Global styles, CSS variables, typography, and reset rules.
+- **Components:**
+  - `Preloader`: Manages the initial load animation and transition.
+  - `CustomCursor`: Advanced tracking and magnetic sticky logic for hovering over buttons (`.floating-btn`).
+  - `Navigation`: Fixed floating action button that opens the main site directory.
+  - `ResumeOverlay`: Symmetric top-left button that triggers the detailed PDF/information modal.
+  - `Hero`: Giant typography with GSAP staggered animations and parallax scrolling.
+  - `Work`: The horizontal scrolling project showcase.
+  - `About`: Bio, stats, and animated skill progress sections.
+  - `Contact`: Bottom-of-page interactive footer and social links.
+
+## 🎨 Design Philosophy
+
+- **Typography First:** Uses large, bold text for visual hierarchy (primarily using the `Inter` font, complemented by stylized headers).
+- **Interactive Depth:** Extensive use of `backdrop-filter: blur`, z-index stacking, mixed blend modes, and parallax scrolling to create a 3D feel on a 2D canvas.
+- **Color Palette:** Grounded in earthy, premium tones—specifically Dark Green (`#102F15`), Sage Green (`#728C5A`), and Light Cream (`#EAF1B1`)—interwoven with dynamic gradient accents.
+
+## 🛠️ Tech Stack
+
+- **React 18/19** (Vite + SWC)
+- **GSAP** (Core, ScrollTrigger)
+- **Lenis** (Smooth scroll library by Studio Freight)
+- **Pure CSS3** (Flexbox, Grid, CSS Variables)
+
+---
+
+_Developed by Dushmanta Khilari - Web Developer & Motion Designer_
