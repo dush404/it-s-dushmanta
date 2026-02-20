@@ -1,0 +1,247 @@
+/* ResumeOverlay.css */
+
+/* Resume Button mapped to the left side symmetrically */
+.resume-toggle-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--color-dark);
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resume-toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Full Screen Overlay */
+.resume-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.resume-overlay-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 47, 21, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Modal Content */
+.resume-content-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 900px;
+  height: 80vh;
+  margin-top: 2rem;
+}
+
+.resume-modal {
+  background: var(--color-light); /* Matching Cream theme */
+  border-radius: 20px;
+  padding: 4rem;
+  color: var(--color-dark);
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar for the Resume Modal */
+.resume-modal::-webkit-scrollbar {
+  width: 6px;
+}
+.resume-modal::-webkit-scrollbar-thumb {
+  background: rgba(16, 47, 21, 0.2);
+  border-radius: 3px;
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid rgba(16, 47, 21, 0.1);
+  padding-bottom: 2rem;
+  gap: 2rem;
+}
+
+.resume-header-info {
+  flex: 1;
+}
+
+.resume-header-info h2 {
+  font-family: 'Retolia', serif; 
+  font-size: 3.5rem;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--color-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.resume-header-info h3 {
+  font-size: 1.25rem;
+  color: var(--color-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.resume-summary {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(16, 47, 21, 0.8);
+  max-width: 800px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-dark);
+  color: var(--color-light);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(16, 47, 21, 0.2);
+}
+
+.resume-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Custom ratio for main details vs sidebar */
+  gap: 4rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.resume-section {
+  margin-bottom: 3.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(16, 47, 21, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.resume-item {
+  margin-bottom: 2rem;
+}
+
+.resume-item h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--color-dark);
+}
+
+.resume-date {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-medium);
+  margin-bottom: 0.75rem;
+}
+
+.resume-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(16, 47, 21, 0.8);
+}
+
+/* Sidebar specific stuff */
+.sidebar-section .section-title {
+  font-size: 1rem;
+}
+
+.contact-list p {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: rgba(16, 47, 21, 0.85);
+}
+
+.contact-list strong {
+  color: var(--color-dark);
+}
+
+.skills-category {
+  margin-bottom: 1.5rem;
+}
+
+.skills-category h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.25rem;
+}
+
+.skills-category p {
+  font-size: 0.85rem;
+  color: rgba(16, 47, 21, 0.75);
+  line-height: 1.5;
+}
+
+.resume-stats-list, .language-list {
+  padding-left: 1.25rem;
+  color: rgba(16, 47, 21, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.resume-stats-list li, .language-list li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .resume-body {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .resume-modal {
+    padding: 2rem;
+  }
+  
+  .resume-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .resume-toggle-btn {
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

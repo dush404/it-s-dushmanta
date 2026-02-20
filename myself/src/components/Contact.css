@@ -1,0 +1,200 @@
+/* Contact Section Styles - Minimal Green Revert */
+
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-header {
+  margin-bottom: 4rem;
+}
+
+.contact-category {
+  color: var(--color-medium); /* Sage */
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+}
+
+.contact-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  color: var(--color-dark);
+  letter-spacing: -0.03em;
+}
+
+.contact-title-accent {
+  color: var(--color-medium);
+  display: block;
+}
+
+.contact-methods {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Big readable email link */
+.contact-email {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.contact-email::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--color-medium);
+  transition: width 0.3s ease;
+}
+
+.contact-email:hover {
+  color: var(--color-medium);
+  transform: translateY(-2px);
+}
+
+.contact-email:hover::after {
+  width: 100%;
+}
+
+/* Phone Styling */
+.contact-phone {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--color-medium);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.contact-phone:hover {
+  color: var(--color-dark);
+}
+
+/* Social Links Grid */
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.social-link {
+  font-size: 0.875rem;
+  color: var(--color-medium);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+.social-link:hover {
+  color: var(--color-dark);
+  border-color: var(--color-medium);
+  transform: translateY(-2px);
+}
+
+/* Footer Attribution */
+.contact-footer {
+  margin-top: 6rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(114, 140, 90, 0.2); /* Sage transparent */
+  width: 100%;
+}
+
+.contact-footer p {
+  font-size: 0.875rem;
+  color: var(--color-medium);
+  opacity: 0.8;
+  letter-spacing: 0.05em;
+}
+
+/* Background Atmosphere */
+.contact-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(114, 140, 90, 0.1) 0%, transparent 60%);
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .contact-title {
+    font-size: 6rem;
+  }
+  .contact-email {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-title {
+    font-size: 7.5rem;
+  }
+  .contact-email {
+    font-size: 4.5rem;
+  }
+  .social-links {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-title {
+    font-size: 3rem;
+  }
+  .contact-email {
+    font-size: 1.75rem; /* Ensure it fits on mobile */
+    word-break: break-all;
+  }
+  .contact-phone {
+    font-size: 1.25rem;
+  }
+  .social-links {
+    gap: 1rem;
+  }
+}

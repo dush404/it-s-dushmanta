@@ -1,0 +1,106 @@
+/* Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Retolia';
+  src: url('./assets/fonts/Retolia.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Minimal Green Palette */
+:root {
+  --color-dark: #102F15;      /* Dark green */
+  --color-medium: #728C5A;    /* Sage green */
+  --color-light: #EAF1B1;     /* Light cream */
+  --color-bg: #EAF1B1;        /* Background */
+  --color-text: #102F15;      /* Text */
+}
+
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: 
+    radial-gradient(ellipse 80% 80% at 50% -10%, rgba(255, 255, 255, 1) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 60% at 90% 10%, rgba(168, 204, 230, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 70% at 10% 40%, rgba(220, 240, 160, 0.8) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 90% at 50% 50%, rgba(158, 208, 98, 0.8) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 85% 90%, rgba(45, 115, 60, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 70% at 15% 85%, rgba(114, 168, 180, 0.8) 0%, transparent 60%),
+    #9bc475; /* Base mid green */
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Retolia', serif;
+  font-weight: normal;
+}
+
+/* Hide Scrollbar (Global) */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom selection color */
+::selection {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+::-moz-selection {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+/* Lenis Smooth Scroll */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

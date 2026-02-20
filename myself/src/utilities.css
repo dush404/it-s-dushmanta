@@ -1,0 +1,96 @@
+/* Additional Tailwind utilities and custom classes */
+
+@layer utilities {
+  /* Mix blend modes */
+  .mix-blend-normal {
+    mix-blend-mode: normal;
+  }
+  
+  .mix-blend-difference {
+    mix-blend-mode: difference;
+  }
+  
+  .mix-blend-overlay {
+    mix-blend-mode: overlay;
+  }
+
+  /* Backdrop blur utilities */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur {
+    backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+  
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+  }
+  
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+  }
+
+  /* Transform utilities */
+  .translate-z-0 {
+    transform: translateZ(0);
+  }
+
+  /* Scrollbar hide */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Will-change optimization */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* GPU acceleration */
+  .gpu-accelerate {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Text rendering */
+  .text-rendering-optimize {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-white text-black hover:bg-gray-200;
+  }
+
+  /* Card styles */
+  .card {
+    @apply rounded-2xl overflow-hidden;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply min-h-screen py-24 px-6 md:px-12;
+  }
+}

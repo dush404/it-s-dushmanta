@@ -1,0 +1,369 @@
+/* About Section Styles - Minimal Green Revert */
+
+.about-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Alignment */
+.about-header {
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.about-category {
+  color: var(--color-light); /* Cream on Sage */
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-dark); /* Dark Green on Sage */
+  letter-spacing: -0.02em;
+}
+
+.about-title-accent {
+  color: var(--color-light);
+  display: block; /* Break line correctly */
+}
+
+/* Grid Layout Fix */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile first */
+  gap: 4rem; /* Proper spacing between blocks */
+}
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-item h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--color-light);
+  line-height: 1.7;
+  font-weight: 400;
+  max-width: 600px; /* Readable line length */
+}
+
+.about-bio p {
+  margin: 0;
+}
+
+/* Skills Layout */
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  color: var(--color-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.skill-level {
+  color: var(--color-light);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.skill-bar {
+  height: 4px;
+  background: rgba(16, 47, 21, 0.2); /* Dark transparent track */
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--color-dark); /* Dark fill */
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+/* Services Grid - 2 columns */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.service-card {
+  padding: 1rem 1.25rem;
+  background: rgba(16, 47, 21, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  transition: all 0.3s ease;
+  cursor: default;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.service-card:hover {
+  background: var(--color-dark);
+  color: var(--color-light);
+  transform: translateY(-2px);
+}
+
+/* Minimal CTA Button */
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--color-dark);
+  color: var(--color-light);
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.about-cta-button:hover {
+  background: var(--color-light);
+  color: var(--color-dark);
+  transform: translateX(5px);
+}
+
+.about-cta-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.about-cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* Subtle background decoration */
+.about-decoration {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(59, 130, 200, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .about-section {
+    padding: 8rem 4rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    gap: 3rem;
+  }
+  
+  .about-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    gap: 5rem;
+  }
+  .about-title {
+    font-size: 5.5rem;
+  }
+  .about-item h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-title {
+    font-size: 2.5rem;
+  }
+  .about-item {
+    gap: 1rem;
+  }
+  /* Removed services-grid styles as section is removed */
+}
+
+/* Coding Timeline Styles - Minimal */
+.about-timeline {
+  grid-column: 1 / -1; /* Span all columns */
+  width: 100%;
+}
+
+.timeline-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  /* Removed glass background for minimal look */
+  padding: 0;
+  border: 1px solid rgba(16, 47, 21, 0.2); /* Subtle dark border */
+}
+
+.timeline-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  min-width: 600px; /* Ensure it doesn't squish too much */
+}
+
+.timeline-table th {
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-dark);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(16, 47, 21, 0.2);
+  background: rgba(16, 47, 21, 0.03); /* Very subtle dark tint */
+}
+
+.timeline-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.timeline-table tbody tr:hover {
+  background: rgba(16, 47, 21, 0.05); /* Hover effect using theme color */
+}
+
+.timeline-table td {
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--color-light); /* Light text on Sage background */
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(16, 47, 21, 0.1);
+}
+
+.timeline-table tr:last-child td {
+  border-bottom: none;
+}
+
+.col-topic {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    color: var(--color-dark); /* Highlight topic in dark green */
+}
+
+.topic-icon {
+  font-size: 1.1em;
+  color: var(--color-dark);
+  opacity: 0.8;
+  display: inline-flex;
+}
+
+/* Minimal Badges - Unified Theme */
+.status-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 99px; /* Pill shape */
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+
+/* Uniform Minimal Style for all badges */
+.status-badge {
+  border: 1px solid var(--color-dark);
+  color: var(--color-dark);
+  background: transparent;
+}
+
+/* Optional: Slight variation for Status to differentiate columns slightly if needed, 
+   but keeping it minimal/monochrome is best. */
+
+.status-completed,
+.status-in-progress,
+.status-not-started,
+.status-on-hold,
+.priority-high,
+.priority-medium,
+.category-frontend,
+.category-backend,
+.category-algorithms,
+.category-frontendbackend {
+  /* Resetting all specific colors to the unified minimal theme */
+  background: transparent;
+  color: var(--color-dark);
+  border: 1px solid rgba(16, 47, 21, 0.3);
+}
+
+/* Active/Highlight states if we want subtle distinction */
+.status-completed {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.priority-high {
+  border-color: var(--color-dark);
+  font-weight: 700;
+}
+
+/* Mobile Scroll Hint */
+@media (max-width: 640px) {
+  .timeline-wrapper {
+    margin: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(16, 47, 21, 0.2);
+  }
+  
+  .timeline-table th, 
+  .timeline-table td {
+    padding: 1rem;
+  }
+}
